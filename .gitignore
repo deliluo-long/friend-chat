@@ -1,0 +1,11 @@
+node_modules/
+dist/
+server/*.db
+server/server.log
+server/uploads/
+server/test-img.png
+server/node_modules/
+server/chat.db*
+*.log
+target/
+.DS_Store

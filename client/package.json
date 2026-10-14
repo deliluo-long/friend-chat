@@ -1,0 +1,33 @@
+{
+  "name": "friend-chat-client",
+  "version": "1.0.0",
+  "description": "朋友内部聊天 Electron 客户端",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build:web": "vite build",
+    "electron:dev": "electron .",
+    "build": "vite build && electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.0"
+  },
+  "dependencies": {
+    "vue": "^3.4.0"
+  },
+  "build": {
+    "appId": "com.friend.chat",
+    "productName": "FriendChat",
+    "files": [
+      "electron/**",
+      "dist/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.png"
+    }
+  }
+}
